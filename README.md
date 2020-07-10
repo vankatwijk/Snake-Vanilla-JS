@@ -1,1 +1,1 @@
-# tetris-vanilla-js
+# Snake-vanilla-js
