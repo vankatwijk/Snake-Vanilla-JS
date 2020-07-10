@@ -21,5 +21,6 @@ function update(){
 }
 
 function draw() {
+    gameBoard.innerHTML = '' //clear the game board on every iteration
     drawSnake(gameBoard)
 }
