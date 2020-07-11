@@ -34,11 +34,20 @@ export function expandSnake(amount){
     newSegments += amount
 }
 
-export function onSnake(position){
+export function onSnake(position, {ignoreHead = false } = {} ){
     //some will check every object in the body ,instead of doing a loop
-    return snakeBody.some(segment => {
+    return snakeBody.some((segment, index) => {
+        if (ignoreHead && index === 0) return false
         return equalPosition(segment, position)
     })
+}
+
+export function getSankeHead(){
+    return snakeBody[0]
+}
+
+export function snakeIntersection(){
+    return onSnake(snakeBody[0], { ignoreHead: true })
 }
 
 function equalPosition(pos1,pos2){
