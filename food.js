@@ -1,7 +1,7 @@
 import { onSnake,expandSnake } from "./snake.js";
 
 export const SNAKE_SPEED = 5 //updates per second
-const food = {x:10,y:1}
+let food = {x:10,y:1}
 const EXPANSION_RATE = 1
 
 export function update(){
